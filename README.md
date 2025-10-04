@@ -84,5 +84,3 @@ Clone the repo and install dependencies:
 git clone https://github.com/YOURNAME/golf-tour-app.git
 cd golf-tour-app
 npm install
-
-Enjoy!
