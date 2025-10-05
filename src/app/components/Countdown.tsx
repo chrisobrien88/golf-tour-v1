@@ -23,7 +23,7 @@ export default function Countdown() {
       setTimeout(() => {
         setCurrentMessageIndex((prev) => (prev + 1) % beforeCountdownMessage.length);
         setIsTransitioning(false);
-      }, 250); // Half the transition duration
+      }, 400); // Slightly longer transition time
     }, 5000); // Change message every 5 seconds
 
     return () => clearInterval(messageInterval);
@@ -48,9 +48,10 @@ export default function Countdown() {
   return (
     <div className="mt-3 text-sm">
       {/* Message carousel container */}
+      {/* 
       <div className="relative overflow-hidden h-6 mb-2 w-64 mx-auto">
         <div 
-          className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out ${
+          className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-in-out ${
             isTransitioning 
               ? 'transform translate-x-full opacity-0' 
               : 'transform translate-x-0 opacity-100'
@@ -61,9 +62,8 @@ export default function Countdown() {
           </span>
         </div>
         
-        {/* Incoming message */}
         <div 
-          className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out ${
+          className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-in-out ${
             isTransitioning 
               ? 'transform translate-x-0 opacity-100' 
               : 'transform -translate-x-full opacity-0'
@@ -73,7 +73,7 @@ export default function Countdown() {
             {beforeCountdownMessage[(currentMessageIndex + 1) % beforeCountdownMessage.length]}
           </span>
         </div>
-      </div>
+      </div> */}
 
       {/* Countdown */}
       <span aria-live="polite" suppressHydrationWarning className="block text-center">
